@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import *
+from .models import Product, StockProduct, Stock
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -36,6 +36,7 @@ class StockSerializer(serializers.ModelSerializer):
 
         for position in positions:
             StockProduct.objects.update_or_create(
-                defaults={'quantity': position['quantity'], 'price': position['price']},
+                defaults={'quantity': position['quantity'],
+                          'price': position['price']},
                 product=position['product'], stock=stock)
         return stock
