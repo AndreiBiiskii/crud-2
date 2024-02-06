@@ -64,5 +64,5 @@ jobs:
           host: ${{ secrets.host }}
           username: ${{ secrets.username }}
           password: ${{ secrets.password }}
-          script: expect /home/user/crud/deploy.exp
+          script: expect /home/andrei/crud/deploy.exp
 
