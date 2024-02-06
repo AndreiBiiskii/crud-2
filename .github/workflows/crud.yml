@@ -65,7 +65,7 @@ jobs:
           username: ${{ secrets.username }}
           password: ${{ secrets.password }}
           script: |
-            cd /home/andrei/crud
+            cd /home/andrei/crud/stocks_products
             git pull origin main
             source env/bin/activate
             pip install -r requirements.txt
